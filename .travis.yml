@@ -1,15 +1,15 @@
-# specify language
 language:
 - python
-
-# specify python version(s)
 python:
-- "2.7"
-
-# install dependencies
+- '2.7'
 install:
 - pip install -r requirements.txt
-
-# run tests
 script:
 - nosetests
+deploy:
+  provider: heroku
+  api_key:
+    secure: zlteDBwpH9G9Lp1WfuE4Z5Y6c6OZVdn9CEvpblNiAewBpkv7CGloNG/uVmwZvGxtQX1i1sqJnovpkyLilmQ1DNSEf85NT7gefJkI9oHN4x77yuVZbH5qu06bfq8IDxY4nMXrVfG4Q4sY4kTdESFMIHjdzAdKU9MUBSPbzcoWqy1xpKvqWy14k7w0BLqqvk3gU8i3NvmiiyuoEmQL2zGukhXFBXq3rTpUU92kFslGpl35B9Y4ee3Kt2skKK5JY2/rjlAXkUh6UJ6iKTLkqkyurCtO+kyhlaL0FR3BR3LjADY3X18Na8whcVVkc9iee+antSTKwQ1nWFPJEYj0xUj8+5JXEsimBP36S8+iV4QD6JUNV6P/2wK1Avn/jSY2lGJ8BHrcFGtdAm0AG6Bn7Hq5xihHPG/yuMYNLdOz7gUN/Go93att0oXVfydWMtE6bhnwvStkgwhPM0IbvqV12BTSrnw1yPP1p9LMsTs2dL0VYMFdnAOzvgC4y8j3nuBZkBXJIEoQtsO00Nb6O0fvwA3B7rrlyi2dW4Oq/CQl2b/v3zndKLne1UPiSG2FGqThJ8OuOBw76YT1yi0Q56qX2w99niQyoxFWgQNO6NrdpaKf9tHUiafR05nY5kzcamjPV2zsHdNv6PJQbBmqOxI9sZkjYvPwarouqS+dZYk6fal49SU=
+  app: flasktaskr-tux
+  on:
+    repo: atengler/flasktaskr
